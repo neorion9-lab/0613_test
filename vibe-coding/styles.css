@@ -1,12 +1,13 @@
 :root {
-    --bg-color: #050505;
-    --text-main: #f0f0f0;
-    --text-muted: #a0a0a0;
-    --accent-1: #6366f1; /* Indigo */
-    --accent-2: #ec4899; /* Pink */
-    --accent-3: #8b5cf6; /* Purple */
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --bg-color: #12211C; /* Dark Starbucks Green */
+    --text-main: #f9f9f9;
+    --text-muted: #b0c0b8;
+    --accent-1: #00704A; /* Starbucks Green */
+    --accent-2: #CBA258; /* Starbucks Gold */
+    --accent-3: #00A862; /* Starbucks Bright Green */
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -85,7 +86,7 @@ h1, h2, h3, .badge {
 
 /* Typography & Utilities */
 .text-gradient {
-    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    background: linear-gradient(135deg, #00A862 0%, #CBA258 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -93,11 +94,12 @@ h1, h2, h3, .badge {
 
 .glass-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
     padding: 2.5rem;
+    box-shadow: 0 8px 32px var(--glass-shadow);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
 
@@ -135,6 +137,8 @@ h1, h2, h3, .badge {
 
 .badge {
     background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 0.85rem;
@@ -142,7 +146,8 @@ h1, h2, h3, .badge {
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .title {
@@ -186,7 +191,7 @@ h3 {
 .quote {
     border-left: 4px solid var(--accent-3);
     padding: 1.5rem;
-    background: rgba(139, 92, 246, 0.05);
+    background: rgba(0, 168, 98, 0.05);
     border-radius: 0 16px 16px 0;
     font-size: 1.2rem;
     font-style: italic;
@@ -231,9 +236,13 @@ h3 {
 }
 
 .pros, .cons {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
     padding: 1.5rem;
     border-radius: 16px;
+    box-shadow: 0 4px 16px var(--glass-shadow);
 }
 
 .pros ul, .cons ul {
